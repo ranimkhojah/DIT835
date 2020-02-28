@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" href="icon.png">
+    <title>Neighborhood Secondhand</title>
+    <!--fontawesome css-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--animate css-->
+    <link rel="stylesheet" href="css/animate-wow.css">
+
+    <!--main css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <!--responsive css-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Quicksand&display=swap" rel="stylesheet"> 
+    <link href="styles.css" rel="stylesheet">
+    
+  </head>
+<body>
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 0%">
+      <a class="navbar-brand" href="#"><strong>Neighborhood</strong> Secondhand</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link active" href="index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="browse.html">Browse Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Give Away</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" >My Neighbors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#" >About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Map-->
+
+    <div class="img-wrapper">
+
+      <div id="map"></div>
+      <script>
+        var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 57.43, lng: 11.54},
+            zoom: 8
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7MspoeyTXvFtt-T1-mg4OIKpFvLCoNiA&callback=initMap" async defer></script>  
+
+      <div class="img-overlay">
+        <h2 class="find">Find My Neighborhood</h2>
+      </div>
+  </div>
+
+    <!--People Stories-->
+
+<div class= " container-fluid ppl-stories">
+    <br>    <br>    <br>
+    <h2 class="story-title">Neighborhood Stories</h2>
+  <div class="person-story">
+    <img class="ppl-pics" src="images/teddy.png" align="left"/>
+    <BR CLEAR=”left” />
+    <p class="txt-right">"I picked up this teddy bear last week with my daughter from my neighbor Sara. It was very nice meeting her! my girl loved the teddy bear and now Sara's daughter and my daughter are really good friends" - Lin from Jönköping
+    </p> 
+  </div>
+  <div class="person-story">
+      <img class="ppl-pics" src="images/rod.png" align="right"/>
+      <BR CLEAR=”right” />
+      <p class="txt-left">"Who would believe that I got this amazing fishing rod for free! and 30 minutes before my fishing trip with friends. Thanks Emil! one of the kindest people around here in Mölndal." - Magnus from Mölndal
+      </p> 
+    </div>
+    <div class="person-story">
+        <img class="ppl-pics" src="images/mirror.png" align="left"/>
+        <BR CLEAR=”left” />
+        <p class="txt-right">"I've been looking for a small mirror I can hang beside the entrance door. Today, I got my mirror and a piece of kladdkaka from a sweet person in the neighborhood" - Maria from Göteborg
+        </p> 
+      </div>
+      <br>    <br>    <br>
+</div>
+
+<!--Quick Access-->
+<div class=" container-fluid tasks">
+  <br><br><br>
+  <h2 class="tasks-title">Get Started</h2>
+  <!--About Neighborhood Secondhand-->
+  <div class = "container about">
+    <h3 class="sec-title"> About Us </h3>
+    <p class="description"> We live in a society that is pretty driven by consumerism. At the same time we are facing climate change and therefore, we are starting to care more about sustainable life.
+      Therefore, we created Neighborhood Secondhand! A Free website to allow neighbors to give away goods of all kinds. The owners of goods shall be able to post stuff they want to give away (anything from furniture, to electronics, clothes and similar) and our customers (users of the website) would be able to catch such opportunities and get free stuff. 
+    </p>
+  </div>
+  <!--Give Away-->
+  <div class="container quick-tasks">
+      <h3 class="sec-title"> Browse </h3>
+    <div class="container-fluid group-btn">
+      <p class= "description">Sharing is caring! Make your neighbors happy by announcing some items you don't need anymore or you want to get rid of!</p>
+      <button type="button" class="btn btn-outline-dark">Give Away Item</button>
+    </div>
+    <br>
+    <div class="container-fluid group-btn">
+        <p class= "description">Or hey! maybe you are feel lazy for going to a store far away to buy something, well, search if it's available for free in your neighborhood! </p>
+        <a role="button" class="btn btn-outline-dark" href="browse.html">Search Items</a>
+      </div>
+  </div>
+
+</div>
+
+
+  </body>
+</html>
